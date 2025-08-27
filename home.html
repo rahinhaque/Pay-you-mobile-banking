@@ -29,7 +29,7 @@
 
             <div>
                 <button class="btn  text-gray-400"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
-                    Default</button>
+                    Log out</button>
             </div>
         </div>
 
@@ -42,12 +42,12 @@
 
 
         <div class="min-h-[200px] grid grid-cols-3 gap-4 mt-5">
-            <div class="border-2 border-gray-300 p-3 rounded-xl">
+            <div id="add-button" class="border-2 border-gray-300 p-3 rounded-xl">
                 <img src="./assets/wallet1.png" class="mx-auto" alt="">
                 <h1 class="text-center">Add Money</h1>
 
             </div>
-            <div class="border-2 border-gray-300 p-3 rounded-xl">
+            <div id="cash-out-button" class="border-2 border-gray-300 p-3 rounded-xl">
                 <img src="./assets/send1.png" class="mx-auto" alt="">
                 <h1 class="text-center">Cashout</h1>
 
@@ -84,7 +84,7 @@
     <div class="all-form-section max-w-lg mx-auto ">
 
         <!-- add money? -->
-        <div>
+        <div id="add-money-parent">
             <h1 class="my-5 font-bold">Add Money</h1>
             <form class=" bg-white rounded-2xl p-8">
                 <div class="mb-3">
@@ -114,6 +114,75 @@
         </div>
 
     </div>
+
+
+  <!-- add money section (hidden by default) -->
+<div id="add-money-parent" style="display:none">
+    <h1 class="my-5 font-bold">Add Money</h1>
+    <form class="bg-white rounded-2xl p-8">
+        <div class="mb-3">
+            <h1 class="font-semibold">Select A Bank</h1>
+            <select id="bank" class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+                <option>Select A Bank</option>
+                <option>Sonali Bank</option>
+                <option>IFIC Bank</option>
+                <option>Dutch Bangla Bank</option>
+            </select>
+        </div>
+        <div class="mt-3">
+            <label class="font-semibold">Bank Account Number</label><br>
+            <input id="account-number" type="number" placeholder="Enter 11 digit account number"
+                class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+        </div>
+        <div class="mt-3">
+            <label class="font-semibold">Amount to Add</label><br>
+            <input id="add-amount" type="number" placeholder="Add Amount to withdraw"
+                class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+        </div>
+        <div class="mt-3">
+            <label class="font-semibold">Pin Number</label><br>
+            <input id="add-pin" type="password" placeholder="Enter 4 digit pin number"
+                class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+        </div>
+
+        <button class="btn bg-[#0874F2] text-white font-semibold mt-5 w-full rounded-3xl"
+            id="addd-money-btn">Add Money</button>
+    </form>
+</div>
+
+
+
+<!-- cash out section (hidden by default) -->
+<div id="cash-out-parent" class=" max-w-lg mx-auto" style="display:none">
+    <h1 class="my-5 font-bold">Cash Out</h1>
+    <form class="bg-white rounded-2xl p-8">
+        <div class="mt-3">
+            <label class="font-semibold">Agent Number</label><br>
+            <input id="withdraw-agent-number" type="number"
+                placeholder="Enter 11 digit number"
+                class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+        </div>
+        <div class="mt-3">
+            <label class="font-semibold">Amount</label><br>
+            <input id="withdraw-amount" type="number"
+                placeholder="Enter amount to withdraw"
+                class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+        </div>
+        <div class="mt-3">
+            <label class="font-semibold">Pin Number</label><br>
+            <input id="withdraw-pin" type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full" />
+        </div>
+
+        <button id="withdraw-btn"
+            class="btn  bg-[#0874F2] text-white font-semibold mt-5 w-full rounded-3xl">
+            Withdraw
+        </button>
+    </form>
+</div>
+
+
 
 
 
